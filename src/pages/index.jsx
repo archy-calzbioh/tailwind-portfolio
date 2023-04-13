@@ -265,13 +265,12 @@ export default function Home({ articles }) {
             Software designer, digital artist, lifelong learner.
           </h1>
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-            I'm Zack, a Bay Area-based artist, bleeding-edge technologist, and
-            recent General Assembly SEI graduate. Passionate about the
-            intersection of art and technology, I'm dedicated to exploring
-            innovative software design. My mission is to
-            create impactful experiences that blend artistic expression with
-            cutting-edge technology, empowering individuals and communities
-            alike.
+            I&apos;m Zack, a Bay Area-based artist, bleeding-edge technologist,
+            and recent General Assembly SEI graduate. Passionate about the
+            intersection of art and technology, I&apos;m dedicated to exploring
+            innovative software design. My mission is to create impactful
+            experiences that blend artistic expression with cutting-edge
+            technology, empowering individuals and communities alike.
           </p>
           <div className="mt-6 flex gap-6">
             <SocialLink
