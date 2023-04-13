@@ -1,16 +1,24 @@
 #!/bin/bash
 
-# Define the search string and the replacement string
-search_string="Spencer"
-replacement_string="Zack"
+# Define the directory containing the files to be renamed
+directory_path="$HOME/Desktop/creatives"
 
-# Define the name of the script file to exclude from the search
-script_name="replace.sh"
+# Initialize a counter
+counter=1
 
-# Find all files in the folder that contain the search string, excluding the script itself
-files_with_string=$(grep -rl --exclude="$script_name" "$search_string" ~/tailwindui-spotlight)
+# Iterate through the files in the directory and rename them sequentially
+for file in "$directory_path"/*; do
+  # Extract the file extension
+  file_extension="${file##*.}"
 
-# Loop through each file and perform the replacement using sed
-for file in $files_with_string; do
-  LC_ALL=C sed -i '' "s|$search_string|$replacement_string|g" "$file"
+  # Construct the new file name
+  new_file_name="$directory_path/$counter.$file_extension"
+
+  # Rename the file
+  mv "$file" "$new_file_name"
+
+  # Increment the counter
+  ((counter++))
 done
+
+echo "Files have been renamed successfully."

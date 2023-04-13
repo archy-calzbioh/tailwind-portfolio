@@ -251,7 +251,8 @@ export default function Home({ articles }) {
     <>
       <Head>
         <title>
-          Zack Bolich - Software designer, founder, and amateur astronaut
+          Zack Bolich - a Bay Area-based artist, bleeding-edge technologist, and
+          recent General Assembly SEI graduate.
         </title>
         <meta
           name="description"
@@ -264,10 +265,13 @@ export default function Home({ articles }) {
             Software designer, digital artist, lifelong learner.
           </h1>
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-            I’m Zack, a software designer and entrepreneur based in New York
-            City. I’m the founder and CEO of Planetaria, where we develop
-            technologies that empower regular people to explore space on their
-            own terms.
+            I'm Zack, a Bay Area-based artist, bleeding-edge technologist, and
+            recent General Assembly SEI graduate. Passionate about the
+            intersection of art and technology, I'm dedicated to exploring
+            innovative software design. My mission is to
+            create impactful experiences that blend artistic expression with
+            cutting-edge technology, empowering individuals and communities
+            alike.
           </p>
           <div className="mt-6 flex gap-6">
             <SocialLink
@@ -276,17 +280,17 @@ export default function Home({ articles }) {
               icon={TwitterIcon}
             />
             <SocialLink
-              href="https://instagram.com"
+              href="https://www.instagram.com/zacx_snax/"
               aria-label="Follow on Instagram"
               icon={InstagramIcon}
             />
             <SocialLink
-              href="https://github.com"
+              href="https://github.com/archy-calzbioh"
               aria-label="Follow on GitHub"
               icon={GitHubIcon}
             />
             <SocialLink
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/zachary-bolich/"
               aria-label="Follow on LinkedIn"
               icon={LinkedInIcon}
             />

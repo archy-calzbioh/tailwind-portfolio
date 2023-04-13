@@ -1,85 +1,75 @@
 import Head from 'next/head'
-
-import { Card } from '@/components/Card'
-import { Section } from '@/components/Section'
+import Image from 'next/image'
 import { SimpleLayout } from '@/components/SimpleLayout'
 
-function SpeakingSection({ children, ...props }) {
+// Import the images you want to display
+import image1 from '@/images/photos/photosquared/1.jpg'
+import image2 from '@/images/photos/photosquared/2.jpg'
+import image3 from '@/images/photos/photosquared/3.jpg'
+import image4 from '@/images/photos/photosquared/4.jpg'
+import image5 from '@/images/photos/photosquared/5.jpeg'
+import image6 from '@/images/photos/photosquared/6.jpeg'
+import image7 from '@/images/photos/photosquared/7.jpeg'
+import image8 from '@/images/photos/photosquared/8.jpeg'
+import image9 from '@/images/photos/photosquared/9.jpeg'
+import image10 from '@/images/photos/photosquared/10.jpeg'
+import image11 from '@/images/photos/photosquared/11.jpeg'
+import image12 from '@/images/photos/photosquared/12.jpeg'
+
+function Photos() {
+  // Create an array of the images you want to display
+  const images = [
+    image1,
+    image2,
+    image3,
+    image4,
+    image5,
+    image6,
+    image7,
+    image8,
+    image9,
+    image10,
+    image11,
+    image12,
+  ]
+
   return (
-    <Section {...props}>
-      <div className="space-y-16">{children}</div>
-    </Section>
+    <div className="mt-16 sm:mt-20">
+      <div className="grid grid-cols-3 gap-5 sm:gap-8">
+        {images.map((image, imageIndex) => (
+          <div
+            key={image.src}
+            className="relative aspect-[9/10] overflow-hidden rounded-xl bg-zinc-100 dark:bg-zinc-800"
+          >
+            <Image
+              src={image}
+              alt=""
+              layout="fill"
+              objectFit="cover"
+              className="absolute inset-0"
+            />
+          </div>
+        ))}
+      </div>
+    </div>
   )
 }
 
-function Appearance({ title, description, event, cta, href }) {
-  return (
-    <Card as="article">
-      <Card.Title as="h3" href={href}>
-        {title}
-      </Card.Title>
-      <Card.Eyebrow decorate>{event}</Card.Eyebrow>
-      <Card.Description>{description}</Card.Description>
-      <Card.Cta>{cta}</Card.Cta>
-    </Card>
-  )
-}
-
-export default function Speaking() {
+export default function Gallery() {
   return (
     <>
       <Head>
-        <title>Speaking - Zack Bolich</title>
+        <title>Gallery - Zack Bolich</title>
         <meta
           name="description"
-          content="I’ve spoken at events all around the world and been interviewed for many podcasts."
+          content="A gallery of my artwork and projects."
         />
       </Head>
       <SimpleLayout
-        title="I’ve spoken at events all around the world and been interviewed for many podcasts."
-        intro="One of my favorite ways to share my ideas is live on stage, where there’s so much more communication bandwidth than there is in writing, and I love podcast interviews because they give me the opportunity to answer questions instead of just present my opinions."
+        title="Gallery"
+        intro="A collection of my artwork and projects."
       >
-        <div className="space-y-20">
-          <SpeakingSection title="Conferences">
-            <Appearance
-              href="#"
-              title="In space, no one can watch you stream — until now"
-              description="A technical deep-dive into HelioStream, the real-time streaming library I wrote for transmitting live video back to Earth."
-              event="SysConf 2021"
-              cta="Watch video"
-            />
-            <Appearance
-              href="#"
-              title="Lessons learned from our first product recall"
-              description="They say that if you’re not embarassed by your first version, you’re doing it wrong. Well when you’re selling DIY space shuttle kits it turns out it’s a bit more complicated."
-              event="Business of Startups 2020"
-              cta="Watch video"
-            />
-          </SpeakingSection>
-          <SpeakingSection title="Podcasts">
-            <Appearance
-              href="#"
-              title="Using design as a competitive advantage"
-              description="How we used world-class visual design to attract a great team, win over customers, and get more press for Planetaria."
-              event="Encoding Design, July 2022"
-              cta="Listen to podcast"
-            />
-            <Appearance
-              href="#"
-              title="Bootstrapping an aerospace company to $17M ARR"
-              description="The story of how we built one of the most promising space startups in the world without taking any capital from investors."
-              event="The Escape Velocity Show, March 2022"
-              cta="Listen to podcast"
-            />
-            <Appearance
-              href="#"
-              title="Programming your company operating system"
-              description="On the importance of creating systems and processes for running your business so that everyone on the team knows how to make the right decision no matter the situation."
-              event="How They Work Radio, September 2021"
-              cta="Listen to podcast"
-            />
-          </SpeakingSection>
-        </div>
+        <Photos />
       </SimpleLayout>
     </>
   )
