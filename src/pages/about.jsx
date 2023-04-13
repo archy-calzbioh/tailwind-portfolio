@@ -61,12 +61,12 @@ export default function About() {
           </div>
           <div className="lg:order-first lg:row-span-2">
             <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
-              I'm Zack Bolich. I live in the Bay Area, where I engineer
+              I&apos;m Zack Bolich. I live in the Bay Area, where I engineer
               creativity and innovation.
             </h1>
             <div className="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
               <p>
-                Ever since I was a child, I've been fascinated by the
+                Ever since I was a child, I&apos;ve been fascinated by the
                 convergence of engineering, technology, music, and art. Growing
                 up in the vibrant Bay Area, I was surrounded by a culture of
                 innovation and creativity that inspired me to explore the
@@ -88,12 +88,12 @@ export default function About() {
                 inclusive society, where everyone has the opportunity to thrive.
               </p>
               <p>
-                Today, I'm on a mission to harness the power of technology to
-                drive positive change. Whether it's developing innovative
-                software solutions or crafting thought-provoking art, I'm
-                dedicated to making a meaningful impact—one that reflects the
-                values and aspirations of my community and paves the way for a
-                brighter future.
+                Today, I&apos;m on a mission to harness the power of technology
+                to drive positive change. Whether it&apos;s developing
+                innovative software solutions or crafting thought-provoking art,
+                I&apos;m dedicated to making a meaningful impact—one that
+                reflects the values and aspirations of my community and paves
+                the way for a brighter future.
               </p>
             </div>
           </div>
