@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # Define the search string and the replacement string
-search_string="Spencer Sharp"
-replacement_string="Zack Bolich"
+search_string="Spencer"
+replacement_string="Zack"
 
 # Define the name of the script file to exclude from the search
 script_name="replace.sh"
