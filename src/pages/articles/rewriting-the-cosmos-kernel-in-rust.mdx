@@ -12,18 +12,24 @@ export default (props) => <ArticleLayout meta={meta} {...props} />
 
 When we released the first version of cosmOS last year, it was written in Go. Go is a wonderful programming language with a lot of benefits, but it’s been a while since I’ve seen an article on the front page of Hacker News about rewriting some important tool in Go and I see articles on there about rewriting things in Rust every single week.
 
-```rust
-use ferris_says::say;
-use std::io::{stdout, BufWriter};
+```python
+def beer_song(n):
+    if n == 0:
+        return "No more bottles of beer on the wall, no more bottles of beer.\n" \
+               "Go to the store and buy some more, 99 bottles of beer on the wall."
+    elif n == 1:
+        return "1 bottle of beer on the wall, 1 bottle of beer.\n" \
+               "Take one down and pass it around, no more bottles of beer on the wall.\n" \
+               beer_song(0)
+    elif n == 2:
+        return "2 bottles of beer on the wall, 2 bottles of beer.\n" \
+               "Take one down and pass it around, 1 bottle of beer on the wall.\n" \
+               beer_song(1)
+    else:
+        return f"{n} bottles of beer on the wall, {n} bottles of beer.\n" \
+               f"Take one down and pass it around, {n-1} bottles of beer on the wall.\n" \
+               beer_song(n-1)"
 
-fn main() {
-    let stdout = stdout();
-    let message = String::from("Hello fellow hackers");
-    let width = message.chars().count();
-
-    let mut writer = BufWriter::new(stdout.lock());
-    say(message.as_bytes(), width, &mut writer).unwrap();
-}
 ```
 
 I derive a large amount of my self-worth from whether or not Hacker News is impressed with the work I'm doing, so when I realized this, I cancelled all of our existing projects and started migrating everything to Rust immediately.

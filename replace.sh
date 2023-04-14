@@ -1,24 +1,13 @@
 #!/bin/bash
 
-# Define the directory containing the files to be renamed
-directory_path="$HOME/Desktop/creatives"
+# Define the search string and the replacement string
+search_string="Speaking"
+replacement_string="Art"
 
-# Initialize a counter
-counter=1
+# Find all files in the folder that contain the search string, excluding the script itself
+files_with_string=$(grep -rl --exclude="$0" "$search_string" ~/tailwindui-spotlight)
 
-# Iterate through the files in the directory and rename them sequentially
-for file in "$directory_path"/*; do
-  # Extract the file extension
-  file_extension="${file##*.}"
-
-  # Construct the new file name
-  new_file_name="$directory_path/$counter.$file_extension"
-
-  # Rename the file
-  mv "$file" "$new_file_name"
-
-  # Increment the counter
-  ((counter++))
+# Loop through each file and perform the replacement using sed
+for file in $files_with_string; do
+  LC_ALL=C sed -i '' "s|$search_string|$replacement_string|g" "$file"
 done
-
-echo "Files have been renamed successfully."
