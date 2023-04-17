@@ -139,8 +139,8 @@ function Newsletter() {
 function Resume() {
   let resume = [
     {
-      company: 'Planetaria',
-      title: 'CEO',
+      company: 'LOLcat GPT',
+      title: 'MEOW',
       logo: logoPlanetaria,
       start: '2019',
       end: {
