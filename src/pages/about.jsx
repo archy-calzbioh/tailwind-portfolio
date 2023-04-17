@@ -44,7 +44,8 @@ export default function About() {
         <title>About - Zack Bolich</title>
         <meta
           name="description"
-          content="I’m Zack Bolich. I live in New York City, where I design the future."
+          content="I'm Zack Bolich. I live in the Bay Area, where I engineer
+              creativity and innovation."
         />
       </Head>
       <Container className="mt-16 sm:mt-32">
